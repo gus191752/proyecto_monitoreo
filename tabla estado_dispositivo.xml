@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.5
+- https://www.phpmyadmin.net
+-
+- Servidor: localhost:3306
+- Tiempo de generación: 04-01-2023 a las 14:10:10
+- Versión del servidor: 10.5.16-MariaDB
+- Versión de PHP: 7.3.32
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="id19420026_basedatos3" collation="utf8_unicode_ci" charset="utf8">
+            <pma:table name="estado_dispositivo">
+                CREATE TABLE `estado_dispositivo` (
+                  `num_tarjeta` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+                  `planta_sur_1` int(50) NOT NULL,
+                  `chiller_1` int(50) NOT NULL,
+                  `ascensor1_1` int(50) NOT NULL,
+                  `temperature_1` int(50) NOT NULL,
+                  `fecha` datetime NOT NULL,
+                  `compresor1_chiller1` int(50) NOT NULL,
+                  `compresor2_chiller1` int(50) NOT NULL,
+                  `compresor3_chiller1` int(50) NOT NULL,
+                  `flujo_chiller1` int(50) NOT NULL,
+                  `switch_chiller1` int(50) NOT NULL,
+                  `compresor1_chiller2` int(50) NOT NULL,
+                  `compresor2_chiller2` int(50) NOT NULL,
+                  `compresor3_chiller2` int(50) NOT NULL,
+                  `flujo_chiller2` int(50) NOT NULL,
+                  `switch_chiller2` int(50) NOT NULL,
+                  `corpoelec_440v` int(50) NOT NULL,
+                  `switch_bomba1_chiller` int(50) NOT NULL,
+                  `motor_bomba1_chiller` int(50) NOT NULL,
+                  `falla_bomba1_chiller` int(50) NOT NULL,
+                  `switch_bomba2_chiller` int(50) NOT NULL,
+                  `motor_bomba2_chiller` int(50) NOT NULL,
+                  `falla_bomba2_chiller` int(50) NOT NULL,
+                  `switch_bomba3_chiller` int(50) NOT NULL,
+                  `motor_bomba3_chiller` int(50) NOT NULL,
+                  `falla_bomba3_chiller` int(50) NOT NULL,
+                  `switch_uma40ton` int(50) NOT NULL,
+                  `motor_uma40ton` int(50) NOT NULL,
+                  `falla_uma40ton` int(50) NOT NULL,
+                  `reloj_uma40ton` int(50) NOT NULL,
+                  `switch_extractor1` int(50) NOT NULL,
+                  `motor_extractor1` int(50) NOT NULL,
+                  `falla_extractor1` int(50) NOT NULL,
+                  `reloj_estractor1` int(50) NOT NULL,
+                  `switch_extractor2` int(50) NOT NULL,
+                  `motor_extractor2` int(50) NOT NULL,
+                  `falla_extractor2` int(50) NOT NULL,
+                  `reloj_extractor2` int(50) NOT NULL,
+                  `corpoelec_220v` int(50) NOT NULL,
+                  `energizado_asc_corp` int(50) NOT NULL,
+                  `funcionamiento_asc_corp` int(50) NOT NULL,
+                  `falla_asc_corp` int(50) NOT NULL,
+                  `energizado_asc_lobbynorte` int(50) NOT NULL,
+                  `funcionamiento_asc_lobbynorte` int(50) NOT NULL,
+                  `falla_asc_lobbynorte` int(50) NOT NULL,
+                  `energizado_asc_lobbysur` int(50) NOT NULL,
+                  `funcionamiento_asc_lobbysur` int(50) NOT NULL,
+                  `falla_asc_lobbysur` int(50) NOT NULL,
+                  `energizado_asc_carganorte` int(50) NOT NULL,
+                  `funcionamiento_asc_carganorte` int(50) NOT NULL,
+                  `falla_asc_carganorte` int(50) NOT NULL,
+                  `reloj_uma_sala17` int(50) NOT NULL,
+                  `motor_uma_sala17` int(50) NOT NULL,
+                  `falla_uma_sala17` int(50) NOT NULL,
+                  PRIMARY KEY (`num_tarjeta`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'id19420026_basedatos3'
+    -->
+    <database name="id19420026_basedatos3">
+        <!-- Tabla estado_dispositivo -->
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta1</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2023-01-02 17:20:47</column>
+            <column name="compresor1_chiller1">1</column>
+            <column name="compresor2_chiller1">1</column>
+            <column name="compresor3_chiller1">1</column>
+            <column name="flujo_chiller1">1</column>
+            <column name="switch_chiller1">1</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta10</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">1</column>
+            <column name="funcionamiento_asc_lobbysur">1</column>
+            <column name="falla_asc_lobbysur">1</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta11</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">1</column>
+            <column name="funcionamiento_asc_carganorte">1</column>
+            <column name="falla_asc_carganorte">1</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta12</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">1</column>
+            <column name="motor_uma_sala17">1</column>
+            <column name="falla_uma_sala17">1</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta2</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2023-01-02 14:31:17</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">1</column>
+            <column name="compresor2_chiller2">1</column>
+            <column name="compresor3_chiller2">1</column>
+            <column name="flujo_chiller2">1</column>
+            <column name="switch_chiller2">1</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta3</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-12-29 14:19:24</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">1</column>
+            <column name="motor_bomba1_chiller">1</column>
+            <column name="falla_bomba1_chiller">1</column>
+            <column name="switch_bomba2_chiller">1</column>
+            <column name="motor_bomba2_chiller">1</column>
+            <column name="falla_bomba2_chiller">1</column>
+            <column name="switch_bomba3_chiller">1</column>
+            <column name="motor_bomba3_chiller">1</column>
+            <column name="falla_bomba3_chiller">1</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta4</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-12-29 14:19:39</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">1</column>
+            <column name="motor_uma40ton">1</column>
+            <column name="falla_uma40ton">1</column>
+            <column name="reloj_uma40ton">1</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta5</column>
+            <column name="planta_sur_1">1</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">1</column>
+            <column name="temperature_1">1</column>
+            <column name="fecha">2023-01-04 14:09:57</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta6</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2023-01-03 13:40:48</column>
+            <column name="compresor1_chiller1">40</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">1</column>
+            <column name="motor_extractor1">1</column>
+            <column name="falla_extractor1">1</column>
+            <column name="reloj_estractor1">1</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta7</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">1</column>
+            <column name="motor_bomba2_chiller">1</column>
+            <column name="falla_bomba2_chiller">1</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta8</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">1</column>
+            <column name="funcionamiento_asc_corp">1</column>
+            <column name="falla_asc_corp">1</column>
+            <column name="energizado_asc_lobbynorte">0</column>
+            <column name="funcionamiento_asc_lobbynorte">0</column>
+            <column name="falla_asc_lobbynorte">0</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+        <table name="estado_dispositivo">
+            <column name="num_tarjeta">tarjeta9</column>
+            <column name="planta_sur_1">0</column>
+            <column name="chiller_1">0</column>
+            <column name="ascensor1_1">0</column>
+            <column name="temperature_1">0</column>
+            <column name="fecha">2022-11-30 00:19:26</column>
+            <column name="compresor1_chiller1">0</column>
+            <column name="compresor2_chiller1">0</column>
+            <column name="compresor3_chiller1">0</column>
+            <column name="flujo_chiller1">0</column>
+            <column name="switch_chiller1">0</column>
+            <column name="compresor1_chiller2">0</column>
+            <column name="compresor2_chiller2">0</column>
+            <column name="compresor3_chiller2">0</column>
+            <column name="flujo_chiller2">0</column>
+            <column name="switch_chiller2">0</column>
+            <column name="corpoelec_440v">0</column>
+            <column name="switch_bomba1_chiller">0</column>
+            <column name="motor_bomba1_chiller">0</column>
+            <column name="falla_bomba1_chiller">0</column>
+            <column name="switch_bomba2_chiller">0</column>
+            <column name="motor_bomba2_chiller">0</column>
+            <column name="falla_bomba2_chiller">0</column>
+            <column name="switch_bomba3_chiller">0</column>
+            <column name="motor_bomba3_chiller">0</column>
+            <column name="falla_bomba3_chiller">0</column>
+            <column name="switch_uma40ton">0</column>
+            <column name="motor_uma40ton">0</column>
+            <column name="falla_uma40ton">0</column>
+            <column name="reloj_uma40ton">0</column>
+            <column name="switch_extractor1">0</column>
+            <column name="motor_extractor1">0</column>
+            <column name="falla_extractor1">0</column>
+            <column name="reloj_estractor1">0</column>
+            <column name="switch_extractor2">0</column>
+            <column name="motor_extractor2">0</column>
+            <column name="falla_extractor2">0</column>
+            <column name="reloj_extractor2">0</column>
+            <column name="corpoelec_220v">0</column>
+            <column name="energizado_asc_corp">0</column>
+            <column name="funcionamiento_asc_corp">0</column>
+            <column name="falla_asc_corp">0</column>
+            <column name="energizado_asc_lobbynorte">1</column>
+            <column name="funcionamiento_asc_lobbynorte">1</column>
+            <column name="falla_asc_lobbynorte">1</column>
+            <column name="energizado_asc_lobbysur">0</column>
+            <column name="funcionamiento_asc_lobbysur">0</column>
+            <column name="falla_asc_lobbysur">0</column>
+            <column name="energizado_asc_carganorte">0</column>
+            <column name="funcionamiento_asc_carganorte">0</column>
+            <column name="falla_asc_carganorte">0</column>
+            <column name="reloj_uma_sala17">0</column>
+            <column name="motor_uma_sala17">0</column>
+            <column name="falla_uma_sala17">0</column>
+        </table>
+    </database>
+</pma_xml_export>
