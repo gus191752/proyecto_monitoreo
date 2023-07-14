@@ -45,7 +45,10 @@
     
 
 <?php
-//////////////////////////////////////////codigo PHP/////////////////////////////////////////    
+//////////////////////////////////////////codigo PHP/////////////////////////////////////////  
+date_default_timezone_set("America/Caracas");
+echo date('l jS \of F Y h:i:s A');
+//date_default_timezone_get();
 ////////////////////////////////////////////////////////////////////////////////////////////   
 
 require_once('conexion2.php');  //llama al archivo conexion.php
@@ -103,11 +106,12 @@ if ($estado_planta==0)
     }
 */
 
-echo"<h3>Feria Baja </h3>";    
+echo"<h3>Plaza Central </h3>";    
     
 echo"<p1>Temperatura= ".$row_5[4]." °C</p1><br>";
 echo"<p1>Humedad Relativa = ".$row_5[1]." %</p1><br>";
-//echo"<p1>fecha=".$row_5[5]."</p1><br>";
+echo"<br>";
+echo"<p1>fecha=".$row_5[5]."</p1><br>";
 echo"</div20>";
 echo'<i id="icono_ojo" class="fa-sharp fa-solid fa-eye"></i>';
 echo"</div6>";  //  <<====
@@ -177,10 +181,12 @@ if ($flujo_chiller1==0)
         echo"<br>";
     }    
 */
-    echo"<p1>Temperatura Salida= ".$row_1[10]." °C</p1><br>";
+   // echo"<p1>Temperatura Salida= ".$row_1[10]." °C</p1><br>";
     //echo"<p1>Temperatura salida</p1><p2> $temperatura_chiller1</p2>";
     echo"<br>";
-     
+  
+//echo"<br>";
+echo"<p1>actualizacion=".$row_1[5]."</p1><br>";   
     
 echo"</div2>";    //  <<======
 echo'<i id="icono_ojo_chiller1" class="fa-sharp fa-solid fa-eye"></i>';
@@ -192,12 +198,19 @@ $consulta_select_2 = "SELECT * FROM estado_dispositivo WHERE num_tarjeta='tarjet
 $select_2 = mysqli_query($conn->conectardb2(),$consulta_select_2); //select
 $row_2 = mysqli_fetch_row($select_2); //funcion crea un vector con los datos de la tarjeta 5
 
-$compresor1_chiller2=$row_2[11];
-$compresor2_chiller2=$row_2[12];
-$compresor3_chiller2=$row_2[13];
-$flujo_chiller2=$row_2[14];
-$switch_chiller2=$row_2[15];
-$corpoelec_440v=$row_2[16];
+//$compresor1_chiller2=$row_2[11];
+//$compresor2_chiller2=$row_2[12];
+//$compresor3_chiller2=$row_2[13];
+//$flujo_chiller2=$row_2[14];
+//$switch_chiller2=$row_2[15];
+//$corpoelec_440v=$row_2[16];
+
+$compresor1_chiller2=$row_1[11];
+$compresor2_chiller2=$row_1[12];
+$compresor3_chiller2=$row_1[13];
+$flujo_chiller2=$row_1[14];
+$switch_chiller2=$row_1[15];
+$corpoelec_440v=$row_1[16];
 
 echo'<img class="imagen_advertencia" id="imagen_adv_chiller2"  src="imagenes/advertencia_amarilla.png">';
 echo'<img class="imagen_advertencia" id="imagen_ok_chiller2"  src="imagenes/ok.png">';
@@ -262,6 +275,8 @@ if ($corpoelec_440v==1)
         echo"<br>";
     }*/
 
+echo"<br>";
+echo"<p1>actualizacion=".$row_2[5]."</p1><br>";
 
 echo"</div3>";   // <<=======
 echo'<i id="icono_ojo_chiller2" class="fa-sharp fa-solid fa-eye"></i>';
@@ -537,6 +552,8 @@ if ($motor_uma40ton==0)
 echo"</div11>";   
 
 echo"</div10>";   //  <<=========
+echo"<br>";
+echo"<p1>actualizacion=".$row_3[5]."</p1><br>";
 echo'</section>';
 /////////////////////////////////////////////////////////////////////    
 //////////////////////////// tarjeta 6//////////////////////////////////
@@ -549,59 +566,133 @@ $switch_extractor1=$row_6[30];
 $motor_extractor1=$row_6[31];
 $falla_extractor1=$row_6[32];
 $reloj_estractor1=$row_6[33];
+$switch_extractor2=$row_6[34];
+$motor_extractor2=$row_6[35];
+$falla_extractor2=$row_6[36];
+$reloj_estractor2=$row_6[37];
+$corpoelec_220v=$row_6[38];   //   <<=======   corpoelec 220
+$energizado_asc_corp=$row_6[39];
 
 echo'<section class="extractores" id="extractores">';
 echo"<div12>";  //  <<=======
 echo"<div13>";  //  <<=======
 
-echo"<h3>Sistema 1 de Extractores de Feria</h3>";
+echo"<h3>Sistema de Extractores de Feria Baja</h3>";
 
 if ($switch_extractor1==1)
     {
-        echo"<p1>switch extractor1</p1><p3> Apagado</p3>";
+        echo"<p1>Extractor Sur Grande</p1><p3> Apagado</p3>";
         echo"<br>";
     }
 if ($switch_extractor1==0)
     {
-        echo"<p1>switch extractor1</p1><p2> Encendido</p2>";
+        echo"<p1>Extractor Sur Grande</p1><p2> Encendido</p2>";
         echo"<br>";
     }
 if ($motor_extractor1==1)
     {
-        echo"<p1>motor extractor1</p1><p3> Apagado</p3>";
+        echo"<p1>Extractor Sur Pequeño</p1><p3> Apagado</p3>";
         echo"<br>";
     }
 if ($motor_extractor1==0)
     {
-        echo"<p1>motor extractor1</p1><p2> Encendido</p2>";
+        echo"<p1>Extractor Sur Pequeño</p1><p2> Encendido</p2>";
         echo"<br>";
     }
 if ($falla_extractor1==1)
     {
-        echo"<p1>falla extractor1</p1><p3> Apagada</p3>";
+        echo"<p1>Extractor Norte Grande</p1><p3> Apagada</p3>";
         echo"<br>";
     }
 if ($falla_extractor1==0)
     {
-        echo"<p1>falla extractor1</p1><p2> Encendido</p2>";
+        echo"<p1>Extractor Norte Grande</p1><p2> Encendido</p2>";
         echo"<br>";
     }
     
 if ($reloj_estractor1==1)
     {
-        echo"<p1>reloj estractor1</p1><p3> Apagada</p3>";
+        echo"<p1>Extractor Norte Pequeño</p1><p3> Apagada</p3>";
         echo"<br>";
     }
 if ($reloj_estractor1==0)
     {
-        echo"<p1>reloj estractor1</p1><p2> Encendido</p2>";
+        echo"<p1>Extractor Norte Pequeño</p1><p2> Encendido</p2>";
         echo"<br>";
-    }    
+    } 
+    
+  echo"<h3>Aires Acondicionados de Feria Alta</h3>";  
+    
+if ($switch_extractor2==1)
+    {
+        echo"<p1>Compresor AA_1_1</p1><p3> Apagado</p3>";
+        echo"<br>";
+    }
+if ($switch_extractor2==0)
+    {
+        echo"<p1>Compresor AA_1_1</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+if ($motor_extractor2==1)
+    {
+        echo"<p1>Compresor AA_1_2</p1><p3> Apagado</p3>";
+        echo"<br>";
+    }
+if ($motor_extractor2==0)
+    {
+        echo"<p1>Compresor AA_1_2</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+if ($falla_extractor2==1)
+    {
+        echo"<p1>Compresor AA_2_1</p1><p3> Apagada</p3>";
+        echo"<br>";
+    }
+if ($falla_extractor2==0)
+    {
+        echo"<p1>Compresor AA_2_1</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+    
+if ($reloj_estractor2==1)
+    {
+        echo"<p1>Compresor AA_2_2</p1><p3> Apagada</p3>";
+        echo"<br>";
+    }
+if ($reloj_estractor2==0)
+    {
+        echo"<p1>Compresor AA_2_2</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+    
+if ($corpoelec_220v==1)
+    {
+        echo"<p1>Compresor AA_3_1</p1><p3> Apagada</p3>";
+        echo"<br>";
+    }
+if ($corpoelec_220v==0)
+    {
+        echo"<p1>Compresor AA_3_1</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+    
+if ($energizado_asc_corp==1)
+    {
+        echo"<p1>Compresor AA_3_2</p1><p3> Apagada</p3>";
+        echo"<br>";
+    }
+if ($energizado_asc_corp==0)
+    {
+        echo"<p1>Compresor AA_3_2</p1><p2> Encendido</p2>";
+        echo"<br>";
+    }
+echo"<br>";
+echo"<p1>actualizacion=".$row_6[5]."</p1><br>";    
 
 echo"</div13>";   // <<=======
 ///////////////////////////////////////////////////////////////////// 
 //////////////////////////// tarjeta 7//////////////////////////////////
-
+/*
 $consulta_select_7 = "SELECT * FROM estado_dispositivo WHERE num_tarjeta='tarjeta7'";//selecciona datos en la tabla para ver su estado
 $select_7 = mysqli_query($conn->conectardb2(),$consulta_select_7); //select
 $row_7 = mysqli_fetch_row($select_7); //funcion crea un vector con los datos de la tarjeta 7
@@ -661,6 +752,8 @@ if ($reloj_estractor2==0)
 echo"</div14>";   // <<=======
 echo"</div12>";   // <<=======
 echo'</section>';
+*/
+
 /////////////////////////////////////////////////////////////////////
 //////////////////////////// tarjeta 8//////////////////////////////////
 
@@ -710,7 +803,8 @@ if ($falla_asc_corp==1)
         echo"<p1>falla asc corp</p1><p2> Ausente</p2>";
         echo"<br>";
     }
-
+echo"<br>";
+echo"<p1>actualizacion=".$row_8[5]."</p1><br>";
 echo"</div18>";   // <<=======
 echo'<i id="icono_ojo_asc_corp" class="fa-sharp fa-solid fa-eye"></i>';
 
