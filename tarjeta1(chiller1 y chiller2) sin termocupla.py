@@ -24,8 +24,8 @@ def conexion_wifi():                                   #FUNCION de conexion al w
         lista = conexion.scan()                        # scanea las redes wifi disponibles
         for red in lista:
             print(red[0].decode())                     # crea una lista con las redes disponibles
-        conexion.connect("TP-Link_A3C8","")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
-#        conexion.connect("prueba","123456789")
+#        conexion.connect("TP-Link_A3C8","")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
+        conexion.connect("prueba","123456789")
 #        conexion.connect("gus","854317gm")
         while not conexion.isconnected():
             print(".")                                 # mientras no haya coneccion imprime un .
