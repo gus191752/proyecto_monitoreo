@@ -23,9 +23,9 @@ def conexion_wifi():                                   #FUNCION de conexion al w
         lista = conexion.scan()                        # scanea las redes wifi disponibles
         for red in lista:
             print(red[0].decode())                     # crea una lista con las redes disponibles
-        conexion.connect("TP-Link_A3C8","77131478")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
+#        conexion.connect("TP-Link_A3C8","")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
 #        conexion.connect("prueba","12345678")
-#        conexion.connect("gus","854317gm")
+        conexion.connect("gus","854317gm")
         while not conexion.isconnected():
             print(".")                                 # mientras no haya coneccion imprime un .
             utime.sleep(1)            
@@ -160,14 +160,6 @@ while (continuar1):                              #  <<<< bucle while principal >
 #                 contador2=0            
 ######################################################### METODO POST  #####################################################################
         try:
-            
-            #dato= ('&device_label='+ str(dato_tarjeta) + '&chiller='+ str(chiller) + '&ascensor1='+ str(asc1) + '&planta_sur='+ str(planta) + '&temperature='+str(temperatura)+ '&compresor1_chiller1='+ str(compresor1_chiller1) + '&compresor2_chiller1='+ str(compresor2_chiller1) + '&compresor3_chiller1='+ str(compresor3_chiller1) +'&flujo_chiller1='+ str(flujo_chiller1) + '&temperatura_chiller1='+str(temperatura_chiller1)+ '&energizado_asc_corp='+ str(energizado_asc_corp) +'&funcionamiento_asc_corp='+ str(funcionamiento_asc_corp) + '&falla_asc_corp='+str(falla_asc_corp))  # datos a enviar al formulario del host
-#             dato= ('&device_label='+ str(dato_tarjeta) + '&chiller='+ str(chiller) + '&ascensor1='+ str(asc1) + '&planta_sur='+ str(planta) + '&temperature='+str(temperatura)+
-#                    '&compresor1_chiller1='+ str(compresor1_chiller1) + '&compresor2_chiller1='+ str(compresor2_chiller1) + '&compresor3_chiller1='+ str(compresor3_chiller1) +'&flujo_chiller1='+ str(flujo_chiller1) + '&temperatura_chiller1='+str(temperatura_chiller1)+
-#                    '&compresor1_chiller2='+ str(compresor1_chiller2) + '&compresor2_chiller2='+ str(compresor2_chiller2) + '&compresor3_chiller2='+ str(compresor3_chiller2) +'&flujo_chiller2='+ str(flujo_chiller2) + '&switch_chiller2='+str(switch_chiller2)+'&corpoelec_440v='+str(corpoelec_440v) +
-#                    '&energizado_asc_corp='+ str(energizado_asc_corp) + '&funcionamiento_asc_corp='+ str(funcionamiento_asc_corp) + '&falla_asc_corp='+str(falla_asc_corp))
-#
-
             dato= ('&device_label='+ str(dato_tarjeta) + '&compresor1_chiller1='+ str(compresor1_chiller1) + '&compresor2_chiller1='+ str(compresor2_chiller1) + '&compresor3_chiller1='+ str(compresor3_chiller1) +'&flujo_chiller1='+ str(flujo_chiller1) + '&temperatura_chiller1='+str(temperatura_chiller1) +
                    '&compresor1_chiller2='+ str(compresor1_chiller2) + '&compresor2_chiller2='+ str(compresor2_chiller2) + '&compresor3_chiller2='+ str(compresor3_chiller2) +'&flujo_chiller2='+ str(flujo_chiller2) + '&switch_chiller2='+str(switch_chiller2)+'&corpoelec_440v='+str(corpoelec_440v) +
                    '&switch_bomba1_chiller='+str(switch_bomba1_chiller)+'&motor_bomba1_chiller='+str(motor_bomba1_chiller) + '&falla_bomba1_chiller='+str(falla_bomba1_chiller) + '&switch_bomba2_chiller='+str(switch_bomba2_chiller) + '&motor_bomba2_chiller='+str(motor_bomba2_chiller) + '&falla_bomba2_chiller='+str(falla_bomba2_chiller) + '&switch_bomba3_chiller='+str(switch_bomba3_chiller) + '&motor_bomba3_chiller='+str(motor_bomba3_chiller) + '&falla_bomba3_chiller='+str(falla_bomba3_chiller) +
@@ -185,12 +177,9 @@ while (continuar1):                              #  <<<< bucle while principal >
 
             datos=dato
             print("realizando peticion POST")
-            cabezera={'Content-Type':'application/x-www-form-urlencoded'}    # cabezera de la pagina a enviar los datos del formulario                                                                                                                    # tiempo de muestreo
+            cabezera={'Content-Type':'application/x-www-form-urlencoded'}    # cabezera de la pagina a enviar los datos del formulario                                                                                                                    # tiempo de muestreo      
             
-            
-            #envio_datos= urequests.post('https://ingenieriamcy.000webhostapp.com/prueba_recibe2.php',data=datos,headers=cabezera)  # envio de datos metodo post
-            envio_datos= urequests.post('https://iotgus.000webhostapp.com//prueba_recibe2.php',data=datos,headers=cabezera)  # envio de datos metodo post
-            
+            envio_datos= urequests.post('https://talleratlas.com/monitoreo_lasamericas/prueba_recibe2.php',data=datos,headers=cabezera)
 
             utime.sleep(10)
             print(envio_datos.status_code)  # imprime codigo de respuesta
