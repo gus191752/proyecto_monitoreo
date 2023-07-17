@@ -12,10 +12,10 @@ wdt=machine.WDT(timeout=90000)           ## WATCHODOG TIMER, si el sistema no lo
 led = machine.Pin(2,machine.Pin.OUT)     ## habilita el pin 2 como salida para el led indicador
 
 #######################################entradas#######################################
-boton_motor_bomba1_chiller= machine.Pin(23,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
-boton_motor_bomba2_chiller= machine.Pin(22,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
-boton_motor_bomba3_chiller= machine.Pin(21,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
-boton_motor_uma40ton= machine.Pin(19,machine.Pin.IN,machine.Pin.PULL_UP)              # entrada de señales por PULL-UP
+boton_motor_bomba1_chiller= machine.Pin(18,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
+boton_motor_bomba2_chiller= machine.Pin(21,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
+boton_motor_bomba3_chiller= machine.Pin(17,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
+boton_motor_uma40ton= machine.Pin(4,machine.Pin.IN,machine.Pin.PULL_UP)              # entrada de señales por PULL-UP
 
 def conexion_wifi():                                   #FUNCION de conexion al wifi
     try:
@@ -24,8 +24,8 @@ def conexion_wifi():                                   #FUNCION de conexion al w
         lista = conexion.scan()                        # scanea las redes wifi disponibles
         for red in lista:
             print(red[0].decode())                     # crea una lista con las redes disponibles
-        conexion.connect("TP-Link_A3C8","77131478")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
-#        conexion.connect("prueba","12345678")
+#        conexion.connect("TP-Link_A3C8","77131478")    # se conecta a la red, se debe ingresar aqui usuario y clave de la red conocida
+        conexion.connect("prueba","123456789")
 #        conexion.connect("gus","854317gm")
         while not conexion.isconnected():
             print(".")                                 # mientras no haya coneccion imprime un .
@@ -186,7 +186,9 @@ while (continuar1):                              #  <<<< bucle while principal >
             
             
             #envio_datos= urequests.post('https://ingenieriamcy.000webhostapp.com/prueba_recibe2.php',data=datos,headers=cabezera)  # envio de datos metodo post
-            envio_datos= urequests.post('https://iotgus.000webhostapp.com//prueba_recibe2.php',data=datos,headers=cabezera)  # envio de datos metodo post
+            #envio_datos= urequests.post('https://iotgus.000webhostapp.com//prueba_recibe2.php',data=datos,headers=cabezera)  # envio de datos metodo post
+            envio_datos= urequests.post('https://talleratlas.com/monitoreo_lasamericas/prueba_recibe2.php',data=datos,headers=cabezera)
+
             
             utime.sleep(10)
             print(envio_datos.status_code)  # imprime codigo de respuesta
