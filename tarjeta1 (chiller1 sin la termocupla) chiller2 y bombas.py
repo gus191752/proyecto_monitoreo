@@ -21,7 +21,7 @@ boton_motor_bomba2_chiller= machine.Pin(14,machine.Pin.IN,machine.Pin.PULL_UP)  
 boton_motor_bomba3_chiller= machine.Pin(12,machine.Pin.IN,machine.Pin.PULL_UP)         # entrada de señales por PULL-UP
 boton_motor_uma40ton= machine.Pin(4,machine.Pin.IN,machine.Pin.PULL_UP)              # entrada de señales por PULL-UP
 
-def conexion_wifi():                                   #FUNCION de conexion al wifi
+def conexion_wifi():                                   #FUNCIONe de conexion al wifi
     try:
         print("estableciendo conexion a la red")
         conexion.active(True)                          # activa la conexion al wifi 
